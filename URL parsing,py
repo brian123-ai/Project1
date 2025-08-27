@@ -1,0 +1,17 @@
+'''
+PROBLEM STATEMENT:
+get the protocol, domain name and the page in a URL got from the user
+'''
+
+user_input = input("Enter a URL eg https://www.brian.com/ngiju: ")
+
+protocol = user_input[:user_input.find(':')]
+dot1 = user_input.find('.')
+dot2 = user_input.find('.', dot1 + 1)
+domain_name = user_input[dot1 + 1:dot2] 
+page = user_input[user_input.find('/',dot1):]
+
+print("Protocol:", protocol)
+print("Domain Name:", domain_name)
+print("Page:", page)
+print("URL:", user_input)
